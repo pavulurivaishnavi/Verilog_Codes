@@ -5,6 +5,6 @@ module d_ff(clk, d, q, qbar);
  assign qbar = ~q;
  always @(posedge clk)
   begin
-     q = d;
+     q <= d;
   end
 endmodule
