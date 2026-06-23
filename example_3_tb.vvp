@@ -1,0 +1,107 @@
+#! /opt/homebrew/Cellar/icarus-verilog/13.0/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/va_math.vpi";
+S_0x104ab90b0 .scope module, "example_3_tb" "example_3_tb" 2 1;
+ .timescale 0 0;
+v0x104ab4b50_0 .net "f", 0 0, L_0xaf0c4c540;  1 drivers
+v0xaf1018000_0 .var "x1", 0 0;
+v0xaf10180a0_0 .var "x2", 0 0;
+v0xaf1018140_0 .var "x3", 0 0;
+S_0x104ab9230 .scope module, "DUT" "example_3" 2 5, 3 1 0, S_0x104ab90b0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "x3";
+    .port_info 1 /INPUT 1 "x2";
+    .port_info 2 /INPUT 1 "x1";
+    .port_info 3 /OUTPUT 1 "f";
+L_0xaf0c4c3f0 .functor NOT 1, v0xaf1018140_0, C4<0>, C4<0>, C4<0>;
+L_0xaf0c4c460 .functor AND 1, L_0xaf0c4c3f0, v0xaf10180a0_0, C4<1>, C4<1>;
+L_0xaf0c4c4d0 .functor AND 1, v0xaf1018000_0, v0xaf1018140_0, C4<1>, C4<1>;
+L_0xaf0c4c540 .functor OR 1, L_0xaf0c4c460, L_0xaf0c4c4d0, C4<0>, C4<0>;
+v0x104aba750_0 .net "a", 0 0, L_0xaf0c4c460;  1 drivers
+v0x104aba410_0 .net "b", 0 0, L_0xaf0c4c4d0;  1 drivers
+v0x104aba080_0 .net "c", 0 0, L_0xaf0c4c3f0;  1 drivers
+v0x104ab48d0_0 .net "f", 0 0, L_0xaf0c4c540;  alias, 1 drivers
+v0x104ab4970_0 .net "x1", 0 0, v0xaf1018000_0;  1 drivers
+v0x104ab4a10_0 .net "x2", 0 0, v0xaf10180a0_0;  1 drivers
+v0x104ab4ab0_0 .net "x3", 0 0, v0xaf1018140_0;  1 drivers
+    .scope S_0x104ab90b0;
+T_0 ;
+    %vpi_call 2 8 "$dumpfile", "example_3_tb.vcd" {0 0 0};
+    %vpi_call 2 9 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x104ab90b0 {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x104ab90b0;
+T_1 ;
+    %vpi_call 2 13 "$display", "example_3 simulation" {0 0 0};
+    %vpi_call 2 14 "$monitor", "x3 = %b, x2 = %b, x1 = %b, f = %b", v0xaf1018140_0, v0xaf10180a0_0, v0xaf1018000_0, v0x104ab4b50_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaf1018140_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaf10180a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaf1018000_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaf1018140_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaf10180a0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0xaf1018000_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaf1018140_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0xaf10180a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaf1018000_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaf1018140_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0xaf10180a0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0xaf1018000_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0xaf1018140_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaf10180a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaf1018000_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0xaf1018140_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaf10180a0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0xaf1018000_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0xaf1018140_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0xaf10180a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xaf1018000_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0xaf1018140_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0xaf10180a0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0xaf1018000_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 23 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "example_3_tb.v";
+    "example_3.v";

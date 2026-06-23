@@ -1,0 +1,82 @@
+#! /opt/homebrew/Cellar/icarus-verilog/13.0/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/va_math.vpi";
+S_0x100c7c8d0 .scope module, "bcd_adder_tb" "bcd_adder_tb" 2 1;
+ .timescale 0 0;
+v0xc94c748c0_0 .var "a", 3 0;
+v0xc94c74960_0 .var "b", 3 0;
+v0xc94c74a00_0 .var "cin", 0 0;
+v0xc94c74aa0_0 .net "cout", 0 0, L_0x100c85c90;  1 drivers
+v0xc94c74b40_0 .net "sum", 3 0, L_0x100c85bf0;  1 drivers
+S_0x100c7ca50 .scope module, "DUT" "bcd_adder" 2 6, 3 1 0, S_0x100c7c8d0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "a";
+    .port_info 1 /INPUT 4 "b";
+    .port_info 2 /INPUT 1 "cin";
+    .port_info 3 /OUTPUT 1 "cout";
+    .port_info 4 /OUTPUT 4 "sum";
+v0x100c7edd0_0 .net *"_ivl_0", 4 0, L_0x100c852f0;  1 drivers
+v0x100c7ee70_0 .net *"_ivl_10", 4 0, L_0x100c85430;  1 drivers
+L_0xc948540a0 .functor BUFT 1, C4<0000>, C4<0>, C4<0>, C4<0>;
+v0x100c7ef10_0 .net *"_ivl_13", 3 0, L_0xc948540a0;  1 drivers
+L_0xc948540e8 .functor BUFT 1, C4<01001>, C4<0>, C4<0>, C4<0>;
+v0x100c7efb0_0 .net/2u *"_ivl_16", 4 0, L_0xc948540e8;  1 drivers
+v0xc94c74000_0 .net *"_ivl_18", 0 0, L_0xc950101e0;  1 drivers
+L_0xc94854130 .functor BUFT 1, C4<00110>, C4<0>, C4<0>, C4<0>;
+v0xc94c740a0_0 .net/2u *"_ivl_20", 4 0, L_0xc94854130;  1 drivers
+v0xc94c74140_0 .net *"_ivl_22", 4 0, L_0xc94c74d20;  1 drivers
+L_0xc94854010 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0xc94c741e0_0 .net *"_ivl_3", 0 0, L_0xc94854010;  1 drivers
+v0xc94c74280_0 .net *"_ivl_4", 4 0, L_0x100c85390;  1 drivers
+L_0xc94854058 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0xc94c74320_0 .net *"_ivl_7", 0 0, L_0xc94854058;  1 drivers
+v0xc94c743c0_0 .net *"_ivl_8", 4 0, L_0xc94c74be0;  1 drivers
+v0xc94c74460_0 .net "a", 3 0, v0xc94c748c0_0;  1 drivers
+v0xc94c74500_0 .net "b", 3 0, v0xc94c74960_0;  1 drivers
+v0xc94c745a0_0 .net "cin", 0 0, v0xc94c74a00_0;  1 drivers
+v0xc94c74640_0 .net "correct_sum", 4 0, L_0x100c85b50;  1 drivers
+v0xc94c746e0_0 .net "cout", 0 0, L_0x100c85c90;  alias, 1 drivers
+v0xc94c74780_0 .net "sum", 3 0, L_0x100c85bf0;  alias, 1 drivers
+v0xc94c74820_0 .net "temp_sum", 4 0, L_0xc94c74c80;  1 drivers
+L_0x100c852f0 .concat [ 4 1 0 0], v0xc94c748c0_0, L_0xc94854010;
+L_0x100c85390 .concat [ 4 1 0 0], v0xc94c74960_0, L_0xc94854058;
+L_0xc94c74be0 .arith/sum 5, L_0x100c852f0, L_0x100c85390;
+L_0x100c85430 .concat [ 1 4 0 0], v0xc94c74a00_0, L_0xc948540a0;
+L_0xc94c74c80 .arith/sum 5, L_0xc94c74be0, L_0x100c85430;
+L_0xc950101e0 .cmp/gt 5, L_0xc94c74c80, L_0xc948540e8;
+L_0xc94c74d20 .arith/sum 5, L_0xc94c74c80, L_0xc94854130;
+L_0x100c85b50 .functor MUXZ 5, L_0xc94c74c80, L_0xc94c74d20, L_0xc950101e0, C4<>;
+L_0x100c85bf0 .part L_0x100c85b50, 0, 4;
+L_0x100c85c90 .part L_0x100c85b50, 4, 1;
+    .scope S_0x100c7c8d0;
+T_0 ;
+    %vpi_call 2 9 "$dumpfile", "bcd_adder_tb.vcd" {0 0 0};
+    %vpi_call 2 10 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x100c7c8d0 {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x100c7c8d0;
+T_1 ;
+    %vpi_call 2 14 "$display", "bcd_adder simulation:" {0 0 0};
+    %vpi_call 2 15 "$monitor", "a = %b, b = %b, cin = %b, cout = %b, sum = %b", v0xc94c748c0_0, v0xc94c74960_0, v0xc94c74a00_0, v0xc94c74aa0_0, v0xc94c74b40_0 {0 0 0};
+    %pushi/vec4 8, 0, 4;
+    %store/vec4 v0xc94c748c0_0, 0, 4;
+    %pushi/vec4 8, 0, 4;
+    %store/vec4 v0xc94c74960_0, 0, 4;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0xc94c74a00_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 17 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "bcd_adder_tb.v";
+    "bcd_adder.v";
