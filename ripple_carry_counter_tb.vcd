@@ -1,0 +1,451 @@
+$date
+	Wed Jun 24 14:13:05 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module ripple_carry_counter_tb $end
+$var wire 4 ! q [3:0] $end
+$var reg 1 " clk $end
+$var reg 1 # reset $end
+$scope module DUT $end
+$var wire 1 " clk $end
+$var wire 1 # reset $end
+$var wire 4 $ q [3:0] $end
+$scope module T1 $end
+$var wire 1 " clk $end
+$var wire 1 % d $end
+$var wire 1 # reset $end
+$var wire 1 & q $end
+$scope module D1 $end
+$var wire 1 " clk $end
+$var wire 1 % d $end
+$var wire 1 # reset $end
+$var reg 1 & q $end
+$upscope $end
+$upscope $end
+$scope module T2 $end
+$var wire 1 ' clk $end
+$var wire 1 ( d $end
+$var wire 1 # reset $end
+$var wire 1 ) q $end
+$scope module D1 $end
+$var wire 1 ' clk $end
+$var wire 1 ( d $end
+$var wire 1 # reset $end
+$var reg 1 ) q $end
+$upscope $end
+$upscope $end
+$scope module T3 $end
+$var wire 1 * clk $end
+$var wire 1 + d $end
+$var wire 1 # reset $end
+$var wire 1 , q $end
+$scope module D1 $end
+$var wire 1 * clk $end
+$var wire 1 + d $end
+$var wire 1 # reset $end
+$var reg 1 , q $end
+$upscope $end
+$upscope $end
+$scope module T4 $end
+$var wire 1 - clk $end
+$var wire 1 . d $end
+$var wire 1 # reset $end
+$var wire 1 / q $end
+$scope module D1 $end
+$var wire 1 - clk $end
+$var wire 1 . d $end
+$var wire 1 # reset $end
+$var reg 1 / q $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0/
+1.
+0-
+0,
+1+
+0*
+0)
+1(
+0'
+0&
+1%
+b0 $
+1#
+0"
+b0 !
+$end
+#5
+1"
+#10
+0"
+#12
+0#
+#15
+1"
+#20
+1'
+0%
+b1 !
+b1 $
+1&
+0"
+#25
+1"
+#30
+1*
+0(
+1)
+0'
+1%
+b10 !
+b10 $
+0&
+0"
+#35
+1"
+#40
+1'
+0%
+b11 !
+b11 $
+1&
+0"
+#45
+1"
+#50
+1-
+0+
+1,
+0*
+1(
+0)
+0'
+1%
+b100 !
+b100 $
+0&
+0"
+#55
+1"
+#60
+1'
+0%
+b101 !
+b101 $
+1&
+0"
+#65
+1"
+#70
+1*
+0(
+1)
+0'
+1%
+b110 !
+b110 $
+0&
+0"
+#75
+1"
+#80
+1'
+0%
+b111 !
+b111 $
+1&
+0"
+#85
+1"
+#90
+0.
+1/
+0-
+1+
+0,
+0*
+1(
+0)
+0'
+1%
+b1000 !
+b1000 $
+0&
+0"
+#95
+1"
+#100
+1'
+0%
+b1001 !
+b1001 $
+1&
+0"
+#105
+1"
+#110
+1*
+0(
+1)
+0'
+1%
+b1010 !
+b1010 $
+0&
+0"
+#115
+1"
+#120
+1'
+0%
+b1011 !
+b1011 $
+1&
+0"
+#125
+1"
+#130
+1-
+0+
+1,
+0*
+1(
+0)
+0'
+1%
+b1100 !
+b1100 $
+0&
+0"
+#135
+1"
+#140
+1'
+0%
+b1101 !
+b1101 $
+1&
+0"
+#145
+1"
+#150
+1*
+0(
+1)
+0'
+1%
+b1110 !
+b1110 $
+0&
+0"
+#155
+1"
+#160
+1'
+0%
+b1111 !
+b1111 $
+1&
+0"
+#165
+1"
+#170
+1.
+0/
+0-
+1+
+0,
+0*
+1(
+0)
+0'
+1%
+b0 !
+b0 $
+0&
+0"
+#175
+1"
+#180
+1'
+0%
+b1 !
+b1 $
+1&
+0"
+#185
+1"
+#190
+1*
+0(
+1)
+0'
+1%
+b10 !
+b10 $
+0&
+0"
+#195
+1"
+#200
+1'
+0%
+b11 !
+b11 $
+1&
+0"
+#205
+1"
+#210
+1-
+0+
+1,
+0*
+1(
+0)
+0'
+1%
+b100 !
+b100 $
+0&
+0"
+#212
+0-
+1+
+b0 !
+b0 $
+0,
+1#
+#215
+1"
+#220
+0"
+#222
+0#
+#225
+1"
+#230
+1'
+0%
+b1 !
+b1 $
+1&
+0"
+#235
+1"
+#240
+1*
+0(
+1)
+0'
+1%
+b10 !
+b10 $
+0&
+0"
+#245
+1"
+#250
+1'
+0%
+b11 !
+b11 $
+1&
+0"
+#255
+1"
+#260
+1-
+0+
+1,
+0*
+1(
+0)
+0'
+1%
+b100 !
+b100 $
+0&
+0"
+#265
+1"
+#270
+1'
+0%
+b101 !
+b101 $
+1&
+0"
+#275
+1"
+#280
+1*
+0(
+1)
+0'
+1%
+b110 !
+b110 $
+0&
+0"
+#285
+1"
+#290
+1'
+0%
+b111 !
+b111 $
+1&
+0"
+#295
+1"
+#300
+0.
+1/
+0-
+1+
+0,
+0*
+1(
+0)
+0'
+1%
+b1000 !
+b1000 $
+0&
+0"
+#305
+1"
+#310
+1'
+0%
+b1001 !
+b1001 $
+1&
+0"
+#315
+1"
+#320
+1*
+0(
+1)
+0'
+1%
+b1010 !
+b1010 $
+0&
+0"
+#322
