@@ -1,0 +1,61 @@
+$date
+	Thu Jun 25 11:55:49 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module comparator_tb $end
+$var wire 1 ! A_ls_B $end
+$var wire 1 " A_gt_B $end
+$var wire 1 # A_eq_B $end
+$var reg 4 $ A [3:0] $end
+$var reg 4 % B [3:0] $end
+$scope module DUT $end
+$var wire 4 & A [3:0] $end
+$var wire 1 # A_eq_B $end
+$var wire 1 " A_gt_B $end
+$var wire 1 ! A_ls_B $end
+$var wire 4 ' B [3:0] $end
+$var reg 4 ( x [3:0] $end
+$var integer 32 ) i [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b100 )
+b1110 (
+b1 '
+b0 &
+b1 %
+b0 $
+0#
+0"
+1!
+$end
+#10
+0!
+1#
+b1111 (
+b100 )
+b11 %
+b11 '
+b11 $
+b11 &
+#20
+0!
+1"
+0#
+b100 (
+b100 )
+b100 %
+b100 '
+b1111 $
+b1111 &
+#30
