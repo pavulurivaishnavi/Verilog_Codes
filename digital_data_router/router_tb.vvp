@@ -1,0 +1,56 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_012B7938 .scope module, "router_tb" "router_tb" 2 1;
+ .timescale 0 0;
+v01143188_0 .var "in", 3 0;
+v011431E0_0 .net "out", 3 0, L_012B8E58; 1 drivers
+v01143238_0 .var "sel_demux", 1 0;
+v012B8D20_0 .var "sel_mux", 1 0;
+S_012B7E88 .scope module, "DUT" "router" 2 5, 3 1, S_012B7938;
+ .timescale 0 0;
+v01142508_0 .net *"_s2", 3 0, C4<0001>; 1 drivers
+v012B40A8_0 .net *"_s4", 3 0, L_012B8DD0; 1 drivers
+v012B4100_0 .net *"_s6", 3 0, C4<0000>; 1 drivers
+v012B4158_0 .net "in", 3 0, v01143188_0; 1 drivers
+v012B31D8_0 .alias "out", 3 0, v011431E0_0;
+v012B3230_0 .net "out_mux", 0 0, L_012B8D78; 1 drivers
+v012B3288_0 .net "sel_demux", 1 0, v01143238_0; 1 drivers
+v01143130_0 .net "sel_mux", 1 0, v012B8D20_0; 1 drivers
+L_012B8D78 .part/v v01143188_0, v012B8D20_0, 1;
+L_012B8DD0 .shift/l 4, C4<0001>, v01143238_0;
+L_012B8E58 .functor MUXZ 4, C4<0000>, L_012B8DD0, L_012B8D78, C4<>;
+    .scope S_012B7938;
+T_0 ;
+    %vpi_call 2 8 "$dumpfile", "router_tb.vcd";
+    %vpi_call 2 9 "$dumpvars", 1'sb0, S_012B7938;
+    %end;
+    .thread T_0;
+    .scope S_012B7938;
+T_1 ;
+    %vpi_call 2 13 "$display", "4_bit digital data router simulation";
+    %vpi_call 2 14 "$monitor", "in = %b, sel_mux = %b, sel_demux = %b, out = %b", v01143188_0, v012B8D20_0, v01143238_0, v011431E0_0;
+    %movi 8, 5, 4;
+    %set/v v01143188_0, 8, 4;
+    %set/v v012B8D20_0, 0, 2;
+    %movi 8, 2, 2;
+    %set/v v01143238_0, 8, 2;
+    %delay 10, 0;
+    %movi 8, 9, 4;
+    %set/v v01143188_0, 8, 4;
+    %movi 8, 2, 2;
+    %set/v v012B8D20_0, 8, 2;
+    %set/v v01143238_0, 1, 2;
+    %delay 10, 0;
+    %vpi_call 2 17 "$finish";
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "router_tb.v";
+    "router.v";
