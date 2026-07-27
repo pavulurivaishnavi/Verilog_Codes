@@ -1,0 +1,60 @@
+$date
+	Mon Jul 27 22:26:46 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module parallel_register_tb $end
+$var wire 4 ! out [3:0] $end
+$var reg 1 " clk $end
+$var reg 4 # in [3:0] $end
+$var reg 1 $ load $end
+$var reg 1 % reset $end
+$scope module DUT $end
+$var wire 1 & clk $end
+$var wire 4 ' in [3:0] $end
+$var wire 1 ( load $end
+$var wire 1 ) reset $end
+$var reg 4 * out [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx *
+0)
+0(
+b1 '
+0&
+0%
+0$
+b1 #
+0"
+bx !
+$end
+#10
+b0 *
+b0 !
+1%
+1)
+b11 #
+b11 '
+1"
+1&
+#20
+1$
+1(
+0%
+0)
+b1111 #
+b1111 '
+0"
+0&
+#30
+b1111 *
+b1111 !
+1"
+1&
