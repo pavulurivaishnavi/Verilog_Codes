@@ -1,0 +1,93 @@
+$date
+	Mon Jul 27 23:21:43 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module serial_in_parallel_out_tb $end
+$var wire 4 ! out [3:0] $end
+$var reg 1 " clk $end
+$var reg 1 # in $end
+$var reg 1 $ reset $end
+$scope module DUT $end
+$var wire 1 % clk $end
+$var wire 1 & in $end
+$var wire 1 ' reset $end
+$var reg 4 ( out [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx (
+0'
+1&
+0%
+0$
+1#
+0"
+bx !
+$end
+#5
+b1xxx (
+b1xxx !
+1"
+1%
+#10
+0"
+0%
+#15
+b0 (
+b0 !
+1$
+1'
+0#
+0&
+1"
+1%
+#20
+0"
+0%
+#25
+b1000 (
+b1000 !
+0$
+0'
+1#
+1&
+1"
+1%
+#30
+0"
+0%
+#35
+b1100 (
+b1100 !
+1"
+1%
+#40
+0"
+0%
+0#
+0&
+#45
+b110 (
+b110 !
+1"
+1%
+#50
+0"
+0%
+1#
+1&
+#55
+b1011 (
+b1011 !
+1"
+1%
+#60
+0"
+0%
