@@ -1,0 +1,92 @@
+$date
+	Tue Jul 28 21:15:26 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module led_blinker_tb $end
+$var wire 1 ! out $end
+$var reg 1 " clk $end
+$var reg 1 # reset $end
+$scope module DUT $end
+$var wire 1 $ clk $end
+$var wire 1 % reset $end
+$var reg 3 & count [2:0] $end
+$var reg 1 ' out $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x'
+bx &
+0%
+0$
+0#
+0"
+x!
+$end
+#5
+0'
+0!
+b0 &
+1#
+1%
+1"
+1$
+#10
+0"
+0$
+#15
+b1 &
+1"
+1$
+0#
+0%
+#20
+0"
+0$
+#25
+b10 &
+1"
+1$
+#30
+0"
+0$
+#35
+b11 &
+1"
+1$
+#40
+0"
+0$
+#45
+b100 &
+1"
+1$
+#50
+0"
+0$
+#55
+1'
+1!
+b0 &
+1"
+1$
+#60
+0"
+0$
+#65
+b1 &
+1"
+1$
+#70
+0"
+0$
+#75
+b10 &
+1"
+1$
